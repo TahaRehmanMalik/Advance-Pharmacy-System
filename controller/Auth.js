@@ -59,7 +59,7 @@ exports.createUser=async(req,res)=>{
             user.resetPasswordToken=token;
             await user.save();
        
-            const  resetPageLink='http://localhost:3000/reset-password?token='+token+'&email='+email;
+            const  resetPageLink='http://localhost:8080/reset-password?token='+token+'&email='+email;
         const subject="reset Password for VeloxMD-pharma";
         const html=`<p> Click<a href='${resetPageLink}'>here</a> to reset Password </p>`
         if(email)
@@ -88,7 +88,7 @@ exports.createUser=async(req,res)=>{
         user.password=hashedPassword;
         user.salt=salt;
         await user.save();
-        const subject=" Successfully Reset Password for E-pharma";
+        const subject=" Successfully Reset Password for VeloxMD-pharma";
         const html=`<p> Successfully Reset Password </p>`
         if(email)
         {

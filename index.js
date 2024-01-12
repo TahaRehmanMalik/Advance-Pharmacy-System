@@ -23,7 +23,7 @@ const cartRouter=require('./routes/Cart');
 const orderRouter=require('./routes/Order');
 const { isAuth, sanitizeUser, cookieExtractor } = require("./services/common");
 const path=require('path');
-const { Order } = require('./modal/Order');
+ const { Order } = require('./modal/Order');
 
 const endpointSecret=process.env.ENDPOINT_SECRET;
 
